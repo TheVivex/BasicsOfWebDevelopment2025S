@@ -1,0 +1,30 @@
+/*
+Author: Bartosz Brzostek
+Date: 2025-09-23
+*/
+body{
+    background-color: rgb(182, 240, 221);
+}
+h1{
+    font-size: 32px;
+    color:chocolate;
+}
+h2{
+    font-size: 29px;
+    color: blue;
+}
+p{
+    color: brown;
+}
+ul{
+    list-style-type: square;
+}
+ol{
+    list-style-type: decimal-leading-zero;
+}
+a{
+    font-style: italic;
+    color: red;
+    font-size: 19px;
+    text-decoration: none;
+}

@@ -1,0 +1,39 @@
+/*
+Author: Bartosz Brzostek
+Date: 2025-10-05
+*/
+h1{
+    font-family: 'Courier New', Courier, monospace;
+}
+h2{
+    font-size: 23px;
+}
+#p1{
+    font-style: italic;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+}
+.bg{
+    background-color: aquamarine;
+}
+.border{
+    border: 2px solid red;
+}
+h1, h2, h3{
+    color: blue;
+}
+section ul li{
+    color: rgb(66, 109, 110);
+}
+a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a[target="_blank"] {
+    color: rgb(85, 128, 0);
+    font-weight: bold;
+}
+
+img[alt] {
+    border: 2px solid gray;
+    width: 150px;
+}

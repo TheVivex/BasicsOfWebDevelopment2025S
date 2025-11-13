@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Weekly Timetable</title>
+  <script src="index.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans">
+  <!--
+    Author: Bartosz Brzostek
+    Date: 2025-11-13
+  -->
+
+  <header class="bg-blue-700 text-center text-white p-8 text-2xl font-bold sm:block hidden">
+    <h1>Registeration page</h1>
+  </header>
+
+  <main class="md:ml-[15%] md:mr-[15%] mt-[3vh] ml-[5%] mr-[5%]">
+    <!-- Top row split into two blocks -->
+    <div class="flex md:flex-row flex-col gap-4 mb-[2vh]">
+      <!-- Student info (30%) -->
+      <section class="bg-white p-3 border-2 border-solid rounded-lg basis-1/3" aria-label="Student information">
+        <h2 class="text-xl font-semibold">Information</h2>
+        <p><span class="">Bartosz Brzostek</span></p>
+        <p><span class="">NITS24K</span></p>
+      </section>
+
+      <!-- Controls (70%): add course + day marks -->
+      <section class="bg-white p-3 border-2 border-solid rounded-lg basis-2/3" aria-label="Add course row">
+        <h2 class="text-xl font-semibold">Add Course</h2>
+
+        <form id="addCourseForm">
+            
+          <div class="mb-1 mt-1 flex gap-3">
+            <label for="timeStamp"></label>
+            <input type="hidden" id="timeStamp" name="timeStamp" type="datetime-local">
+          </div>
+          <div class="mb-1 mt-1 flex gap-3">
+            <label class="" for="fullName">Full Name</label>
+            <input class="flex-1 border-b-2 border-black border-solid  w-full" id="fullName" name="fullName" type="text" placeholder="John Black">
+          </div>
+          <p class="text-red-600 text-sm" id="nameError" style="display: none;">Please type your full name</p>
+          <div class="mb-1 mt-1 flex gap-3">
+            <label for="email">Email</label>
+            <input class="flex-1 border-b-2 border-black border-solid  w-full" id="email" name="email" type="email" placeholder="johnblack@gmail.com">
+          </div>
+          <p class="text-red-600 text-sm" id="emailError" style="display: none;">Please type correct email</p>
+          <div class="mb-1 mt-1 flex gap-3">
+            <label for="tel">Phone number</label>
+            <input class="flex-1 border-b-2 border-black border-solid  w-full" id="tel" name="tel" type="text" placeholder="+358000000000">
+          </div>
+          <p class="text-red-600 text-sm" id="telError" style="display: none;">Please type correct phone number</p>
+          <div class="mb-1 mt-1 flex gap-3">
+            <label for="brithDate">Date of birth</label>
+            <input class="flex-1 border-b-2 border-black border-solid" id="brithDate" name="brithDate" type="date">
+          </div>
+          <p class="text-red-600 text-sm" id="birthError" style="display: none;">You have to be min 13 years old</p>
+          <div class="mb-1 mt-1 flex gap-3">
+            <label><input type="checkbox" id="terms" name="terms" value="terms"> Accept terms</label>
+          </div>
+          <p class="text-red-600 text-sm" id="eulaError" style="display: none;">You have to agree to the terms</p>
+
+          <div class="mb-1 mt-1 flex gap-3">
+            <button id="addRowBtn" type="submit" class="border-2 hover:bg-sky-700 border-blue-600 p-1 rounded-lg bg-blue-500 text-white">Add row</button>
+            <button id="clearBtn" type="reset" class="border-2 hover:bg-sky-700 border-blue-600 p-1 rounded-lg bg-blue-500 text-white">Clear</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!-- Table -->
+    <div class="bg-white p-3 border-2 border-solid rounded-lg">
+      <table class="w-full" id="timetable">
+        <thead class="bg-blue-500 text-white">
+          <tr>
+            <th class="p-3">Full Name</th>
+            <th>Email</th>
+            <th>Phone number</th>
+            <th>Date of birth</th>
+            <th>Submitted at</th>
+          </tr>
+        </thead>
+        <tbody class="[&>tr:nth-child(even)]:bg-blue-50 [&>tr:hover]:bg-blue-100">
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+
+</html>

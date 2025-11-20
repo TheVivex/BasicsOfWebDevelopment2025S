@@ -11,7 +11,7 @@ html, body {
     font-family: Arial, sans-serif;
     margin: 0;
     scroll-behavior: smooth;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .highlight {
@@ -193,10 +193,10 @@ footer a {
 
 #copyrights {
     text-align: end;
+    max-width: 300px;
 }
 
-#contact {
-    max-width: 500px;    
+#contact {  
     width: 400px;
 }
 
@@ -225,7 +225,7 @@ footer a {
     }
     #cards {
         flex-wrap: wrap;
-    }
+    }    
 }
 
 @media only screen and (max-width: 858px) {
@@ -242,7 +242,7 @@ footer a {
         display: none;
     }
     #contact {
-        min-width: 220px;
+        width: 220px;
     }
 }
 

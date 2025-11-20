@@ -75,7 +75,7 @@ h1 {
 
 #hero {
     height: 100vh;
-    background: url("./src/bg.jpg") center/cover no-repeat;
+    background: url("./src/bg.webp") center/cover no-repeat;
     background-attachment: fixed;
     display: flex;
     color: var(--color-text-light);

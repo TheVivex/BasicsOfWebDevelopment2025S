@@ -196,7 +196,8 @@ footer a {
 }
 
 #contact {
-    min-width: 420px;    
+    max-width: 500px;    
+    width: 400px;
 }
 
 

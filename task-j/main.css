@@ -1,0 +1,142 @@
+:root {
+    --color-bg-dark: #000000;
+    --color-text-light: #ffffff;
+    --color-accent: #ffff00;              /* yellow */
+    --color-accent-hover: #c7c702;        /* darker yellow */
+    --color-border: gray;
+    --color-brand-bg: #f5f5f5;
+}
+
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+.highlight {
+    color: var(--color-accent);
+}
+.bold{
+    font-weight: bold;
+}
+header {
+    background-color: var(--color-bg-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-text-light);
+    position: fixed;
+    width: 100%;
+    padding: 15px 14px;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: inherit;
+    color: black;
+    background-color: var(--color-accent);
+    border-radius: 5px;
+    border: none;
+    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+button:hover {
+    background-color: var(--color-accent-hover);
+}
+
+#logo {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+header a:hover {
+    color: var(--color-accent);
+}
+
+section, footer {
+    padding: 0 8%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 72px;
+    margin: 0;
+}
+footer {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    gap: 50px;
+}
+
+footer iframe {
+    height: 300px;
+    width: 300px;
+}
+
+footer a {
+    color: var(--color-accent);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#copyrights {
+    text-align: end;
+    max-width: 300px;
+}
+
+#contact {  
+    width: 400px;
+}
+
+@media only screen and (max-width: 1024px) {
+    footer {
+        flex-direction: column;
+    }
+    #copyrights {
+        text-align: start;
+    }
+}
+
+@media only screen and (max-width: 858px) {
+    header nav {
+        display: none;
+    }    
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+    header button {
+        display: none;
+    }
+    #contact {
+        width: 220px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    footer iframe {
+        width: 250px;
+        height: 250px;
+    }
+    footer {
+        align-items: center;
+    }
+}

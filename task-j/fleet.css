@@ -1,0 +1,69 @@
+#hero{
+    padding-top: 30vh;
+    background: url("./src/bg.webp") center/cover no-repeat;
+    background-attachment: fixed;
+    color: white;
+    padding-bottom: 10vh;
+}
+.carList{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    transition: 0.3s;    
+}
+
+#videoBox{
+    display: flex;
+    justify-content: center;
+}
+#videoBox video{
+    width: 800px;
+}
+
+.carCard img{
+    width: 240px;
+    height: 180px;
+    object-fit: contain;
+    align-self: center;
+}
+@media only screen and (max-width: 1440px){
+    .carCard{
+        display: flex;
+        align-content: center;
+    }
+    .carList{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1050px){
+    .carCard{flex-direction: column;}
+    .carList{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #videoBox video{
+        width: 650px;
+    }
+}
+@media only screen and (max-width: 800px){
+    .carList{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #videoBox video{
+        width: 450px;
+    }
+    .carCard{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+@media only screen and (max-width: 600px){
+    #videoBox video{
+        width: 80vw;
+    }
+}

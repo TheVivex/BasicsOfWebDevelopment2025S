@@ -5,6 +5,9 @@
     color: white;
     padding-bottom: 10vh;
 }
+#hero p{
+    text-shadow: -3px 3px 20px black;
+}
 .carList{
     display: grid;
     grid-template-columns: repeat(4, 1fr);

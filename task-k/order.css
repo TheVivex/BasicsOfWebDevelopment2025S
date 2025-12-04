@@ -1,0 +1,77 @@
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 500px;
+
+    box-shadow: 4px 3px 20px 2px #00000063;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#hero {
+    height: 60vh;
+    background: url("./src/bg.webp") center/cover no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    color: var(--color-text-light);
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0 8%;
+}
+#book{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;}
+#book aside{
+    min-width: 100px;
+    text-align: end;
+}
+
+input[type=datetime-local] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#pickUpLocation,
+#dropOffLocation,
+textarea,
+input[type=submit],
+#agreement {
+    grid-column: 1/ span 2;
+}
+
+input {
+    font-size: 14px;
+    padding: 10px 5px;
+}
+
+input[type=datetime-local],
+select,
+textarea {
+    font: inherit;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 880px) {
+   #book{
+    display: flex;
+    flex-direction: column-reverse  ;
+    align-items: center;
+   }
+}
+
+
+@media only screen and (max-width: 520px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+    #pickUpLocation,
+#dropOffLocation,
+textarea,
+input[type=submit],
+#agreement {
+    grid-column: 1;
+}
+}

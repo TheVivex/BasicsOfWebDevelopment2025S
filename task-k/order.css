@@ -29,7 +29,9 @@ form {
     text-align: end;
 }
 
-input[type=datetime-local] {
+input[type=datetime-local], 
+input[type=text],
+input[type=email] {
     width: 100%;
     box-sizing: border-box;
 }

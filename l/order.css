@@ -1,0 +1,166 @@
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 4px 3px 20px 2px #00000063;
+    padding: 30px;
+    border-radius: 20px;
+    background: white;
+    color: black; 
+}
+
+#hero {
+    height: 60vh;
+    background: url("./src/bg.webp") center/cover no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    color: var(--color-text-light);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 8%;
+}
+
+#book {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1960px;
+    margin: 0 auto 40px;
+}
+
+#book aside {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.4;
+    align-self: start;
+}
+
+input[type=datetime-local], 
+input[type=text],
+input[type=email],
+input[type=tel],
+select,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1.5px solid var(--color-border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+input[type=datetime-local]:focus, 
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-accent-hover);
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: inline-block;
+    color: #222;
+}
+
+#pickupDiv,
+#dropoffDiv,
+#textareaDiv,
+input[type=submit],
+#agreement {
+    grid-column: 1 / -1;
+}
+
+input {
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 12px 0;
+    background-color: var(--color-accent);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background-color 0.4s ease;
+    width: 100%;
+    max-width: 300px;
+    justify-self: center;
+}
+
+input[type=submit]:hover {
+    background-color: var(--color-accent-hover);
+}
+
+#agreement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+#agreement input[type=checkbox] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+#dropoffDiv {
+    display: none;
+}
+
+
+@media only screen and (max-width: 880px) {
+    #book {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    #book aside {
+        order: -1;
+        max-width: 100%;
+        text-align: center;
+        padding: 15px;
+        font-size: 15px;
+    }
+    form {
+        max-width: 90vw;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    form {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+    }
+
+    #pickupDiv,
+    #dropoffDiv,
+    #textareaDiv,
+    input[type=submit],
+    #agreement {
+        grid-column: 1;
+    }
+
+    input[type=submit] {
+        max-width: 100%;
+    }
+}

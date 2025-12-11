@@ -1,2 +1,2 @@
-Improved responsiveness of form grid
-Added clearer form appearance
+- Improved responsiveness of form grid
+- Added clearer form appearance
